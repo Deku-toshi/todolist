@@ -10,7 +10,7 @@ function App() {
       {todoList.map((todo) => {
         return (
           <div key={todo.id}>
-            <button></button>
+            <button onClick={deleteTodo}>削除</button>
             <span>{todo.content}</span>
           </div>
         );
