@@ -1,3 +1,5 @@
+const todoList = [];
+
 function App() {
   return (
     <>
