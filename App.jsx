@@ -7,13 +7,14 @@ function App() {
   const [todos, setTodos] = useState(todoList);
   const [newTodo , setNewTodo] = useState("");
 
-  const deleteTodo = () => {
-    setTodos(todo => todo.id !== id);
+  const deleteTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
   }
 
   const createTodo = () => {
     const newTask = {id : uuidv4() , content: newTodo}
     setTodos([...todos, newTask])
+    setNewTodo("")
   }
 
   return (
