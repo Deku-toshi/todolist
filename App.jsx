@@ -19,7 +19,7 @@ function App() {
         );
       })}
       <div>
-        <input type="text" />
+        <input type="text" value={newTodo} setNewTodo={addTodo}/>
         <button>追加</button>
       </div>
     </>
