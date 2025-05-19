@@ -10,10 +10,6 @@ function App() {
 
   }
 
-  const addTodo = () => {
-    
-  }
-
   const createTodo = () => {
     
   }
