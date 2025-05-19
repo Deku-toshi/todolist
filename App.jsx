@@ -17,16 +17,12 @@ function App() {
 
   return (
     <>
-      {todos.map((todo) => {
-        return (
-          <>
-            <div key={todo.id}>
-              <button onClick={deleteTodo}>削除</button>
-              <span>{todo.content}</span>
-            </div>
-          </>
-        );
-      })}
+      {todos.map((todo) => (
+        <div key={todo.id}>
+          <button onClick={() => deleteTodo(todo.id)}>削除</button>
+          <span>{todo.content}</span>
+        </div>
+      ))}
       <div>
         <input type="text" onChange={(e) => setNewTodo(e.target.value)}/>
         <button onClick={createTodo}>追加</button>
