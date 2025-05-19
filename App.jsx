@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const todoList = [];
 
@@ -11,8 +12,8 @@ function App() {
   }
 
   const createTodo = () => {
-    const newTask = {id : Math.floor(Math.random() * 1e5) , content: newTodo}
-    setTodos([{...todos, newTask}])
+    const newTask = {id : uuidv4() , content: newTodo}
+    setTodos([...todos, newTask])
   }
 
   return (
