@@ -20,7 +20,7 @@ function App() {
       })}
       <div>
         <input type="text" value={newTodo} setNewTodo={addTodo}/>
-        <button>追加</button>
+        <button onClick={createTodo}>追加</button>
       </div>
     </>
   );
