@@ -7,12 +7,12 @@ function App() {
   const [newTodo , setNewTodo] = useState("");
 
   const deleteTodo = () => {
-    setTodo(todo => todo.id !== id);
+    setTodos(todo => todo.id !== id);
   }
 
   const createTodo = () => {
     const newTask = {id : Math.floor(Math.random() * 1e5) , content: newTodo}
-    setTodo({...todo, newTask})
+    setTodos({...todos, newTask})
   }
 
   return (
