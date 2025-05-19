@@ -4,6 +4,7 @@ const todoList = [];
 
 function App() {
   const [todo, setTodo] = useState(todoList);
+  const [newTodo , setNewTodo] = useState("");
 
   return (
     <>
