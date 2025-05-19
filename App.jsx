@@ -7,7 +7,7 @@ function App() {
   const [newTodo , setNewTodo] = useState("");
 
   const deleteTodo = () => {
-
+    setTodo(todo => todo.id !== id);
   }
 
   const createTodo = () => {
