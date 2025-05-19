@@ -3,7 +3,7 @@ import { useState } from "react";
 const todoList = [];
 
 function App() {
-  const [todo, setTodo] = useState(todoList);
+  const [todos, setTodos] = useState(todoList);
   const [newTodo , setNewTodo] = useState("");
 
   const deleteTodo = () => {
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      {todoList.map((todo) => {
+      {todos.map((todo) => {
         return (
           <>
             <div key={todo.id}>
