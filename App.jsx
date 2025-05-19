@@ -12,7 +12,7 @@ function App() {
 
   const createTodo = () => {
     const newTask = {id : Math.floor(Math.random() * 1e5) , content: newTodo}
-    setTodos({...todos, newTask})
+    setTodos([{...todos, newTask}])
   }
 
   return (
