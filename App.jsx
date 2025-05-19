@@ -6,6 +6,18 @@ function App() {
   const [todo, setTodo] = useState(todoList);
   const [newTodo , setNewTodo] = useState("");
 
+  const deleteTodo = () => {
+
+  }
+
+  const addTodo = () => {
+    
+  }
+
+  const createTodo = () => {
+    
+  }
+
   return (
     <>
       {todoList.map((todo) => {
