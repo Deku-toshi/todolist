@@ -31,7 +31,7 @@ function App() {
         );
       })}
       <div>
-        <input type="text" value={newTodo} setNewTodo={addTodo}/>
+        <input type="text" onChange={(e) => setNewTodo(e.target.value)} newTodo={addTodo}/>
         <button onClick={createTodo}>追加</button>
       </div>
     </>
