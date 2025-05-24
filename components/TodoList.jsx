@@ -16,7 +16,7 @@ const TodoList = () => {
           <span>{todo.content}</span>
         </div>
       ))}
-      <Form/>
+      <Form todos={todos} setTodos={setTodos}/>
     </>
   );
 };
