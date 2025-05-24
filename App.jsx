@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import Form from "./components/Form";
 
 const todoList = [];
 
@@ -25,10 +26,7 @@ function App() {
           <span>{todo.content}</span>
         </div>
       ))}
-      <div>
-        <input type="text" value={newTodo} onChange={(e) => setNewTodo(e.target.value)}/>
-        <button onClick={createTodo}>追加</button>
-      </div>
+      <Form/>
     </>
   );
 }
