@@ -3,6 +3,10 @@ import { useState } from "react";
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
 
+  const deleteTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  }
+
   return (
     <>
       {todos.map((todo) => (
