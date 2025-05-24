@@ -2,10 +2,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import TodoList from "./components/TodoList";
 
-const todoList = [];
-
 function App() {
-  const [todos, setTodos] = useState(todoList);
   const [newTodo , setNewTodo] = useState("");
 
   const deleteTodo = (id) => {
