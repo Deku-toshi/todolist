@@ -5,10 +5,6 @@ import TodoList from "./components/TodoList";
 function App() {
   const [newTodo , setNewTodo] = useState("");
 
-  const deleteTodo = (id) => {
-    setTodos(todos.filter(todo => todo.id !== id));
-  }
-
   const createTodo = () => {
     const newTask = {id : uuidv4() , content: newTodo}
     setTodos([...todos, newTask])
