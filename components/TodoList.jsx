@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Form from "./Form";
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
@@ -15,6 +16,7 @@ const TodoList = () => {
           <span>{todo.content}</span>
         </div>
       ))}
+      <Form/>
     </>
   );
 };
