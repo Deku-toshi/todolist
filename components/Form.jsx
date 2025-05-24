@@ -1,4 +1,9 @@
 const Form = () => {
+  const createTodo = () => {
+    const newTask = {id : uuidv4() , content: newTodo}
+    setTodos([...todos, newTask])
+    setNewTodo("")
+  }
   return (
     <>
       <div>
