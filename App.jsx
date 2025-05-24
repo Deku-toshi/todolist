@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import TodoList from "./components/TodoList";
 
 const todoList = [];
 
@@ -19,12 +20,7 @@ function App() {
 
   return (
     <>
-      {todos.map((todo) => (
-        <div key={todo.id}>
-          <button onClick={() => deleteTodo(todo.id)}>削除</button>
-          <span>{todo.content}</span>
-        </div>
-      ))}
+      <TodoList />
       <div>
         <input type="text" value={newTodo} onChange={(e) => setNewTodo(e.target.value)}/>
         <button onClick={createTodo}>追加</button>
