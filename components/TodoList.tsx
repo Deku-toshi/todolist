@@ -3,7 +3,7 @@ import Form from "./Form";
 import React from "react";
 
 export type Todo = {
-    id: number,
+    id: string,
     content: string,
   };
 
@@ -11,7 +11,7 @@ const TodoList = () => {
   
   const [todos, setTodos] = useState<Todo[]>([]);
 
-  const deleteTodo = (id:number) => {
+  const deleteTodo = (id:string) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
