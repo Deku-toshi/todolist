@@ -1,8 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { Todo } from "./TodoList"
 
-const Form = ({ todos, setTodos }) => {
+type TodoProps = {
+  todos: Todo[],
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
+}
+
+const Form:React.FC<TodoProps> = ({ todos, setTodos }) => {
   const [newTodo, setNewTodo] = useState("");
 
   const createTodo = () => {
