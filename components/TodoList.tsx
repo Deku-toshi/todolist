@@ -8,7 +8,7 @@ const TodoList = () => {
     content: string,
   };
   
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState<Todo[]>([]);
 
   const deleteTodo = (id:number) => {
     setTodos(todos.filter((todo) => todo.id !== id));
