@@ -3,11 +3,16 @@ import Form from "./Form";
 import React from "react";
 
 const TodoList = () => {
+  type Todo = {
+    id: number,
+    content: string,
+  };
+  
   const [todos, setTodos] = useState([]);
 
-  const deleteTodo = (id) => {
-    setTodos(todos.filter(todo => todo.id !== id));
-  }
+  const deleteTodo = (id:number) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
 
   return (
     <>
@@ -17,7 +22,7 @@ const TodoList = () => {
           <span>{todo.content}</span>
         </div>
       ))}
-      <Form todos={todos} setTodos={setTodos}/>
+      <Form todos={todos} setTodos={setTodos} />
     </>
   );
 };
