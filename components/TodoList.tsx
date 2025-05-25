@@ -1,12 +1,19 @@
 import { useState } from "react";
 import Form from "./Form";
+import React from "react";
+
+export type Todo = {
+    id: string,
+    content: string,
+  };
 
 const TodoList = () => {
-  const [todos, setTodos] = useState([]);
+  
+  const [todos, setTodos] = useState<Todo[]>([]);
 
-  const deleteTodo = (id) => {
-    setTodos(todos.filter(todo => todo.id !== id));
-  }
+  const deleteTodo = (id:string) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
 
   return (
     <>
@@ -16,7 +23,7 @@ const TodoList = () => {
           <span>{todo.content}</span>
         </div>
       ))}
-      <Form todos={todos} setTodos={setTodos}/>
+      <Form todos={todos} setTodos={setTodos} />
     </>
   );
 };
