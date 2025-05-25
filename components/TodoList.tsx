@@ -2,11 +2,12 @@ import { useState } from "react";
 import Form from "./Form";
 import React from "react";
 
-const TodoList = () => {
-  type Todo = {
+export type Todo = {
     id: number,
     content: string,
   };
+
+const TodoList = () => {
   
   const [todos, setTodos] = useState<Todo[]>([]);
 
